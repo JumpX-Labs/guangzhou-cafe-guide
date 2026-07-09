@@ -2,7 +2,7 @@
 
 一个围绕广州咖啡馆的探店手册站点，采用手绘风格，展示不同街区的咖啡馆，并提供完整的 HTTP API 进行数据管理。
 
-**线上地址**：https://8b75e6da.guangzhou-cafe-guide.pages.dev
+**线上地址**：https://guangzhou-cafe-guide.pages.dev
 
 ---
 

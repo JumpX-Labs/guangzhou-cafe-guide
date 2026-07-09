@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Coffee, MapPin, Search, Settings, FileJson, BookOpen, Rocket } from 'lucide-react'
+import { Coffee, MapPin, Search, Settings, FileJson, BookOpen, Rocket, GitBranch } from 'lucide-react'
 
 export default function Header() {
   const location = useLocation()
@@ -94,6 +94,18 @@ export default function Header() {
               部署
             </span>
           </Link>
+          <a
+            href="https://github.com/JumpX-Labs/guangzhou-cafe-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-2 rounded-wobbly-sm font-body text-sm border-2 bg-paper-light text-ink border-ink transition-all hover:-translate-y-0.5 hover:shadow-paper"
+            title="GitHub 仓库"
+          >
+            <span className="flex items-center gap-1.5">
+              <GitBranch className="w-4 h-4" />
+              <span className="hidden sm:inline">GitHub</span>
+            </span>
+          </a>
         </nav>
       </div>
     </header>
