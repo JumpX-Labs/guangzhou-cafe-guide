@@ -1,0 +1,379 @@
+[
+  {
+    "id": "miaoqian",
+    "name": "庙前咖啡",
+    "slug": "miaoqian-cafe",
+    "district": "dongshankou",
+    "address": "越秀区庙前直街 16 号",
+    "hours": "10:00 - 22:00",
+    "tags": [
+      "老洋房",
+      "手冲",
+      "安静"
+    ],
+    "rating": 4.7,
+    "priceRange": "¥35-55",
+    "signatureDrinks": [
+      "东山口手冲",
+      "焦糖玛奇朵",
+      "冷萃咖啡"
+    ],
+    "tips": [
+      "周末下午人较多，建议上午去",
+      "二楼靠窗位光线最好",
+      "店员会讲解豆子风味"
+    ],
+    "vibe": "适合一个人发呆或带本书坐一下午",
+    "description": "藏在东山口红砖老洋房里的社区咖啡馆，木质家具与老式花砖让人仿佛回到民国广州。",
+    "imagePrompt": "Cozy specialty coffee shop inside a historic red brick building in Guangzhou Dongshankou, warm afternoon light, vintage wooden furniture, patterned tile floor, single origin pour over coffee on table, soft film photography",
+    "recommendation": "想感受东山口文艺气息，从这里开始。"
+  },
+  {
+    "id": "hongzhuan",
+    "name": "红砖瓦砾",
+    "slug": "hongzhuan-wali",
+    "district": "dongshankou",
+    "address": "越秀区恤孤院路 9 号",
+    "hours": "09:00 - 21:00",
+    "tags": [
+      "复古",
+      "庭院",
+      "brunch"
+    ],
+    "rating": 4.5,
+    "priceRange": "¥45-70",
+    "signatureDrinks": [
+      "瓦砾拿铁",
+      "海盐焦糖",
+      "季节限定特调"
+    ],
+    "tips": [
+      "后院有棵老榕树",
+      "brunch 需要提前等位",
+      "宠物友好"
+    ],
+    "vibe": "适合周末 brunch 和好友聚会",
+    "description": "由老洋房改造的庭院咖啡馆，红砖墙、户外天井与特调咖啡构成东山口最悠闲的角落。",
+    "imagePrompt": "Courtyard cafe in Guangzhou Dongshankou historic red brick building, outdoor seating under banyan tree, vintage bicycles, weekend brunch atmosphere, warm sunlight, film photography",
+    "recommendation": "带本书，点杯特调，躲在庭院里晒太阳。"
+  },
+  {
+    "id": "jingli",
+    "name": "井里咖啡",
+    "slug": "jingli-cafe",
+    "district": "liuyun",
+    "address": "天河区六运三街 31 号",
+    "hours": "08:00 - 23:00",
+    "tags": [
+      "社区店",
+      "早 C 晚 A",
+      "露台"
+    ],
+    "rating": 4.6,
+    "priceRange": "¥30-50",
+    "signatureDrinks": [
+      "井里美式",
+      "燕麦拿铁",
+      "晚 A 特调"
+    ],
+    "tips": [
+      "早上八点开门，适合通勤前买一杯",
+      "二楼小露台适合抽烟",
+      "晚上会变成小酒馆"
+    ],
+    "vibe": "适合社畜通勤、晚上小酌",
+    "description": "六运小区里最早的社区咖啡之一，天井、露台和熟人社交让它成为天河打工人的精神角落。",
+    "imagePrompt": "Community cafe in Guangzhou Liuyun residential neighborhood, small terrace with plants, morning coffee crowd, local barista knows regulars, warm urban village atmosphere, street photography",
+    "recommendation": "早上一杯美式，晚上一杯特调，社畜充电站。"
+  },
+  {
+    "id": "xiaojing",
+    "name": "小径咖啡",
+    "slug": "xiaojing-cafe",
+    "district": "liuyun",
+    "address": "天河区六运二街 7 号",
+    "hours": "10:00 - 21:30",
+    "tags": [
+      "极简",
+      "手冲",
+      "安静"
+    ],
+    "rating": 4.8,
+    "priceRange": "¥35-60",
+    "signatureDrinks": [
+      "小径手冲",
+      "茉莉dirty",
+      "巴斯克配美式"
+    ],
+    "tips": [
+      "座位不多，建议错峰",
+      "手冲豆子选择很用心",
+      "周末有咖啡分享会"
+    ],
+    "vibe": "适合咖啡重度爱好者",
+    "description": "藏在六运小区窄巷里的极简咖啡馆，白墙上只有一条手绘小径，专心做咖啡这件事。",
+    "imagePrompt": "Minimalist specialty coffee shop in narrow alley of Guangzhou Liuyun, white walls, simple wooden counter, pour over barista, serene atmosphere, soft natural light, architectural photography",
+    "recommendation": "咖啡师会认真给你推荐豆子。"
+  },
+  {
+    "id": "daokafei",
+    "name": "岛咖啡",
+    "slug": "dao-cafe",
+    "district": "shamian",
+    "address": "荔湾区沙面北街 53 号",
+    "hours": "09:30 - 20:00",
+    "tags": [
+      "欧陆风",
+      "户外",
+      "拍照"
+    ],
+    "rating": 4.4,
+    "priceRange": "¥40-65",
+    "signatureDrinks": [
+      "岛风拿铁",
+      "柠啡",
+      "阿芙佳朵"
+    ],
+    "tips": [
+      "户外座位看街景很舒服",
+      "下午四点的光最温柔",
+      "周末游客多"
+    ],
+    "vibe": "适合拍照、约会、悠闲午后",
+    "description": "沙面岛上被榕树和殖民建筑包围的咖啡馆，欧陆风情与珠江微风让时间慢下来。",
+    "imagePrompt": "European style outdoor cafe on Shamian Island Guangzhou, colonial architecture, banyan trees, patio seating, afternoon tea, relaxed atmosphere, travel photography",
+    "recommendation": "点一杯柠啡，坐在户外看沙面的老房子。"
+  },
+  {
+    "id": "linyindao",
+    "name": "林荫道咖啡",
+    "slug": "linyindao-cafe",
+    "district": "shamian",
+    "address": "荔湾区沙面大街 14 号",
+    "hours": "10:00 - 19:00",
+    "tags": [
+      "安静",
+      "古树",
+      "阅读"
+    ],
+    "rating": 4.6,
+    "priceRange": "¥35-50",
+    "signatureDrinks": [
+      "林荫冷萃",
+      "红茶拿铁",
+      "芝士蛋糕"
+    ],
+    "tips": [
+      "靠窗位能看到古樟树",
+      "工作日几乎没人",
+      "带本书可以坐一下午"
+    ],
+    "vibe": "适合阅读、独处、放空",
+    "description": "躲在沙面林荫道深处的小馆，窗外是百年古树，室内是满架旧书和咖啡香。",
+    "imagePrompt": "Quiet cafe by ancient camphor trees on Shamian Island Guangzhou, large windows, bookshelves, reading nook, soft afternoon light, contemplative mood",
+    "recommendation": "想逃离人群，来这里坐一下午。"
+  },
+  {
+    "id": "qingfeng",
+    "name": "青凤咖啡",
+    "slug": "qingfeng-cafe",
+    "district": "jiangnanxi",
+    "address": "海珠区青凤大街 18 号",
+    "hours": "11:00 - 23:00",
+    "tags": [
+      "潮流",
+      "特调",
+      "夜咖"
+    ],
+    "rating": 4.5,
+    "priceRange": "¥30-55",
+    "signatureDrinks": [
+      "青凤特调",
+      "话梅美式",
+      "百香果气泡"
+    ],
+    "tips": [
+      "晚上十点还开门",
+      "涂鸦墙很出片",
+      "经常换菜单"
+    ],
+    "vibe": "适合年轻人夜咖、朋友聚会",
+    "description": "江南西青凤大街上的潮流咖啡据点，涂鸦、特调和晚场营业时间构成海珠夜咖地图。",
+    "imagePrompt": "Trendy cafe on Guangzhou Jiangnanxi street, graffiti art wall, neon sign, young people socializing, creative coffee cocktails, urban nightlife vibe, street photography",
+    "recommendation": "海珠年轻人的夜咖据点。"
+  },
+  {
+    "id": "zijin",
+    "name": "紫金大街咖啡",
+    "slug": "zijin-cafe",
+    "district": "jiangnanxi",
+    "address": "海珠区紫金大街 36 号",
+    "hours": "09:00 - 22:00",
+    "tags": [
+      "社区",
+      "温馨",
+      "甜品"
+    ],
+    "rating": 4.6,
+    "priceRange": "¥25-45",
+    "signatureDrinks": [
+      "紫金拿铁",
+      "桂花dirty",
+      "提拉米苏"
+    ],
+    "tips": [
+      "甜品每日限量",
+      "老板很健谈",
+      "社区熟客很多"
+    ],
+    "vibe": "适合下午茶、和朋友聊天",
+    "description": "江南西居民楼下开了五年的温馨小馆，甜品和咖啡一样用心，邻里感满满。",
+    "imagePrompt": "Warm neighborhood cafe on Guangzhou Jiangnanxi residential street, cozy interior, homemade desserts, regular customers chatting, community atmosphere, lifestyle photography",
+    "recommendation": "甜品限量，早点去。"
+  },
+  {
+    "id": "qilou",
+    "name": "骑楼咖啡",
+    "slug": "qilou-cafe",
+    "district": "beijinglu",
+    "address": "越秀区文明路 148 号",
+    "hours": "08:30 - 21:00",
+    "tags": [
+      "骑楼",
+      "老广州",
+      "快闪"
+    ],
+    "rating": 4.3,
+    "priceRange": "¥25-40",
+    "signatureDrinks": [
+      "骑楼美式",
+      "姜撞奶咖啡",
+      "老广州拼配"
+    ],
+    "tips": [
+      "骑楼底下可以避雨",
+      "姜撞奶咖啡是招牌",
+      "附近很多老字号小吃"
+    ],
+    "vibe": "适合游客、怀旧、逛吃间隙",
+    "description": "开在广州传统骑楼里的咖啡馆，把老广州记忆与咖啡香气混在一起，隔壁就是老字号。",
+    "imagePrompt": "Cafe in traditional Guangzhou arcade building qilou, old street, red lanterns, blend of historic and modern, coffee counter, tourists and locals, cultural photography",
+    "recommendation": "逛北京路累了，进来喝姜撞奶咖啡。"
+  },
+  {
+    "id": "yuexiu",
+    "name": "越秀书房咖啡",
+    "slug": "yuexiu-study-cafe",
+    "district": "beijinglu",
+    "address": "越秀区北京路 312 号 3 楼",
+    "hours": "10:00 - 22:00",
+    "tags": [
+      "书店",
+      "安静",
+      "学习"
+    ],
+    "rating": 4.7,
+    "priceRange": "¥30-50",
+    "signatureDrinks": [
+      "书房拿铁",
+      "冷萃",
+      "抹茶拿铁"
+    ],
+    "tips": [
+      "三楼靠书架位置最佳",
+      "消费可久坐",
+      "周末有读书分享"
+    ],
+    "vibe": "适合学习、办公、阅读",
+    "description": "北京路闹市里的一家书店咖啡馆，三楼靠窗位能俯瞰老街，安静到能听见翻书声。",
+    "imagePrompt": "Bookstore cafe on third floor overlooking Guangzhou Beijing Road, bookshelves, quiet study corner, large windows, city view, warm reading atmosphere",
+    "recommendation": "闹中取静，适合带电脑待一天。"
+  },
+  {
+    "id": "huacheng",
+    "name": "花城汇咖啡",
+    "slug": "huacheng-cafe",
+    "district": "zhujiangxincheng",
+    "address": "天河区花城大道 89 号",
+    "hours": "07:30 - 20:00",
+    "tags": [
+      "CBD",
+      "快捷",
+      "商务"
+    ],
+    "rating": 4.2,
+    "priceRange": "¥30-50",
+    "signatureDrinks": [
+      "CBD 美式",
+      "燕麦拿铁",
+      "冰博克 dirty"
+    ],
+    "tips": [
+      "早上七点半开门",
+      "适合外卖带走",
+      "工作日中午高峰"
+    ],
+    "vibe": "适合打工人快速提神",
+    "description": "珠江新城写字楼缝隙里的快捷咖啡站，是广州塔脚下打工人的晨间燃料。",
+    "imagePrompt": "Modern takeaway coffee stand in Guangzhou CBD Zhujiangxincheng, high-rise buildings background, business crowd, clean minimalist design, morning rush, urban photography",
+    "recommendation": "早上七点半就开门的打工人救命水。"
+  },
+  {
+    "id": "tianhuan",
+    "name": "天环露台咖啡",
+    "slug": "tianhuan-terrace",
+    "district": "zhujiangxincheng",
+    "address": "天河区天河路 218 号 4 楼",
+    "hours": "10:00 - 22:00",
+    "tags": [
+      "露台",
+      "景观",
+      "约会"
+    ],
+    "rating": 4.6,
+    "priceRange": "¥45-80",
+    "signatureDrinks": [
+      "露台特调",
+      "荔枝玫瑰",
+      "冷萃苏打"
+    ],
+    "tips": [
+      "露台位看广州塔",
+      "傍晚最美",
+      "需要排队等景观位"
+    ],
+    "vibe": "适合约会、看夜景、拍照",
+    "description": "珠江新城商场四楼的露台咖啡馆，城市天际线做背景，咖啡成了看风景的借口。",
+    "imagePrompt": "Rooftop terrace cafe in Guangzhou Zhujiangxincheng with Canton Tower view, city skyline at dusk, outdoor seating, romantic atmosphere, lifestyle photography",
+    "recommendation": "傍晚来，看广州塔和晚霞。"
+  },
+  {
+    "id": "xiguan-2026",
+    "name": "西关咖啡",
+    "slug": "xiguan-cafe",
+    "district": "beijinglu",
+    "address": "荔湾区恩宁路 88 号",
+    "hours": "09:00 - 21:00",
+    "tags": [
+      "西关",
+      "骑楼",
+      "手冲"
+    ],
+    "rating": 4.6,
+    "priceRange": "¥30-55",
+    "signatureDrinks": [
+      "西关手冲",
+      "荔枝气泡美式",
+      "姜撞奶拿铁"
+    ],
+    "tips": [
+      "骑楼街景位很舒服",
+      "周末上午人少",
+      "豆子每月更换"
+    ],
+    "vibe": "适合感受老西关烟火气、拍照",
+    "description": "藏在恩宁路骑楼里的社区咖啡馆，把西关老街的烟火气和手冲咖啡混在一起，窗外是百年骑楼。",
+    "imagePrompt": "Cozy coffee shop in Guangzhou Xiguan arcade street, Enning Road, vintage qilou architecture, wooden counter, pour over coffee, morning light, local neighborhood atmosphere, street photography",
+    "recommendation": "想一次过体验西关和咖啡，来这里坐窗边。"
+  }
+]
