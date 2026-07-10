@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion'
-import { FileJson, Globe, Server } from 'lucide-react'
+import { FileJson, Globe, Server, Terminal } from 'lucide-react'
 import WobblyCard from '../components/WobblyCard.tsx'
 import ScribbleTitle from '../components/ScribbleTitle.tsx'
+
+const BASE_URL = 'https://guangzhou-cafe-guide.pages.dev/api'
 
 interface EndpointProps {
   method: string
   path: string
   description: string
+  example?: string
   request?: string
   response?: string
 }
@@ -18,7 +21,18 @@ const methodColors: Record<string, string> = {
   DELETE: 'bg-red text-paper border-red',
 }
 
-function Endpoint({ method, path, description, request, response }: EndpointProps) {
+function CodeBlock({ label, children }: { label?: string; children: string }) {
+  return (
+    <div className="mb-3">
+      {label && <p className="text-xs font-hand text-ink/70 mb-1">{label}</p>}
+      <pre className="bg-paper p-3 rounded-wobbly-sm text-xs font-mono overflow-x-auto border border-ink/20 whitespace-pre-wrap">
+        {children}
+      </pre>
+    </div>
+  )
+}
+
+function Endpoint({ method, path, description, example, request, response }: EndpointProps) {
   return (
     <WobblyCard className="p-5" rotate={-0.3}>
       <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -31,23 +45,9 @@ function Endpoint({ method, path, description, request, response }: EndpointProp
       </div>
       <p className="font-body text-ink-soft mb-3">{description}</p>
 
-      {request && (
-        <div className="mb-3">
-          <p className="text-xs font-hand text-ink/70 mb-1">请求体</p>
-          <pre className="bg-paper p-3 rounded-wobbly-sm text-xs font-mono overflow-x-auto border border-ink/20">
-            {request}
-          </pre>
-        </div>
-      )}
-
-      {response && (
-        <div>
-          <p className="text-xs font-hand text-ink/70 mb-1">响应示例</p>
-          <pre className="bg-paper p-3 rounded-wobbly-sm text-xs font-mono overflow-x-auto border border-ink/20">
-            {response}
-          </pre>
-        </div>
-      )}
+      {example && <CodeBlock label="curl 示例">{example}</CodeBlock>}
+      {request && <CodeBlock label="请求体">{request}</CodeBlock>}
+      {response && <CodeBlock label="响应示例">{response}</CodeBlock>}
     </WobblyCard>
   )
 }
@@ -62,7 +62,7 @@ export default function ApiDocs() {
       <div className="space-y-2">
         <ScribbleTitle as="h1" className="text-4xl">API 文档</ScribbleTitle>
         <p className="font-body text-ink-soft">
-          广州咖啡馆探店手册开放 API，支持咖啡馆数据的读取与编辑。
+          广州咖啡馆探店手册开放 API，支持咖啡馆数据的读取与编辑。下面示例中的 URL 均可直接复制使用。
         </p>
       </div>
 
@@ -73,10 +73,10 @@ export default function ApiDocs() {
         </div>
         <div className="space-y-2 font-mono text-sm">
           <p className="bg-paper p-2 rounded-wobbly-sm border border-ink/20">
-            开发环境：<span className="text-red">http://localhost:3001/api</span>
+            生产环境：<span className="text-red">{BASE_URL}</span>
           </p>
           <p className="bg-paper p-2 rounded-wobbly-sm border border-ink/20">
-            生产环境（经前端代理）：<span className="text-red">/api</span>
+            本地开发：<span className="text-ink/70">http://localhost:3001/api</span>
           </p>
         </div>
       </WobblyCard>
@@ -91,6 +91,7 @@ export default function ApiDocs() {
           method="GET"
           path="/api/cafes"
           description="获取所有咖啡馆列表，返回 CafeInput 数组。"
+          example={`curl -X GET "${BASE_URL}/cafes"`}
           response={`[
   {
     "id": "miaoqian",
@@ -106,6 +107,7 @@ export default function ApiDocs() {
           method="GET"
           path="/api/cafes/:slug"
           description="根据 slug 获取单个咖啡馆详情。"
+          example={`curl -X GET "${BASE_URL}/cafes/miaoqian-cafe"`}
           response={`{
   "id": "miaoqian",
   "name": "庙前咖啡",
@@ -129,23 +131,25 @@ export default function ApiDocs() {
           method="POST"
           path="/api/cafes"
           description="新增一家咖啡馆。name 和 slug 为必填字段，slug 不能重复。"
-          request={`{
-  "id": "xiguan-2026",
-  "name": "西关咖啡",
-  "slug": "xiguan-cafe",
-  "district": "beijinglu",
-  "address": "荔湾区恩宁路 88 号",
-  "hours": "09:00 - 21:00",
-  "tags": ["西关", "骑楼", "手冲"],
-  "rating": 4.6,
-  "priceRange": "¥30-55",
-  "signatureDrinks": ["西关手冲", "荔枝气泡美式"],
-  "tips": ["骑楼街景位很舒服"],
-  "vibe": "适合感受老西关烟火气",
-  "description": "藏在恩宁路骑楼里的社区咖啡馆...",
-  "imagePrompt": "Cozy coffee shop in Guangzhou Xiguan...",
-  "recommendation": "想一次过体验西关和咖啡，来这里坐窗边。"
-}`}
+          example={`curl -X POST "${BASE_URL}/cafes" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "id": "xiguan-2026",
+    "name": "西关咖啡",
+    "slug": "xiguan-cafe",
+    "district": "beijinglu",
+    "address": "荔湾区恩宁路 88 号",
+    "hours": "09:00 - 21:00",
+    "tags": ["西关", "骑楼", "手冲"],
+    "rating": 4.6,
+    "priceRange": "¥30-55",
+    "signatureDrinks": ["西关手冲", "荔枝气泡美式"],
+    "tips": ["骑楼街景位很舒服"],
+    "vibe": "适合感受老西关烟火气",
+    "description": "藏在恩宁路骑楼里的社区咖啡馆...",
+    "imagePrompt": "Cozy coffee shop in Guangzhou Xiguan...",
+    "recommendation": "想一次过体验西关和咖啡，来这里坐窗边。"
+  }'`}
           response={`{
   "id": "xiguan-2026",
   "name": "西关咖啡",
@@ -156,13 +160,13 @@ export default function ApiDocs() {
         <Endpoint
           method="PUT"
           path="/api/cafes/:id"
-          description="根据 id 更新咖啡馆全部字段。"
-          request={`{
-  "name": "西关咖啡（更新后）",
-  "slug": "xiguan-cafe",
-  "district": "beijinglu",
-  ...
-}`}
+          description="根据 id 更新咖啡馆。请求体中只传需要修改的字段即可，未修改字段会保留原值。"
+          example={`curl -X PUT "${BASE_URL}/cafes/xiguan-2026" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "name": "西关咖啡（更新后）",
+    "rating": 4.8
+  }'`}
           response={`{
   "id": "xiguan-2026",
   "name": "西关咖啡（更新后）",
@@ -174,6 +178,7 @@ export default function ApiDocs() {
           method="DELETE"
           path="/api/cafes/:id"
           description="根据 id 删除咖啡馆。成功返回 204 No Content。"
+          example={`curl -X DELETE "${BASE_URL}/cafes/xiguan-2026"`}
         />
       </div>
 
@@ -187,6 +192,7 @@ export default function ApiDocs() {
           method="GET"
           path="/api/districts"
           description="获取所有街区信息。"
+          example={`curl -X GET "${BASE_URL}/districts"`}
           response={`[
   {
     "id": "dongshankou",
@@ -201,7 +207,8 @@ export default function ApiDocs() {
         <Endpoint
           method="POST"
           path="/api/reset"
-          description="将咖啡馆数据重置为默认种子数据（api/data/seed.json）。返回重置后的咖啡馆列表。"
+          description="将咖啡馆数据重置为默认种子数据（functions/data/seed.json）。返回重置后的咖啡馆列表。"
+          example={`curl -X POST "${BASE_URL}/reset"`}
           response={`[
   { "id": "miaoqian", "name": "庙前咖啡", ... }
 ]`}
@@ -209,7 +216,10 @@ export default function ApiDocs() {
       </div>
 
       <WobblyCard className="p-5" rotate={-0.5}>
-        <h2 className="font-display text-xl mb-3">数据模型</h2>
+        <div className="flex items-center gap-2 mb-3">
+          <Terminal className="w-5 h-5 text-red" />
+          <h2 className="font-display text-xl">数据模型</h2>
+        </div>
         <p className="font-body text-ink-soft mb-3">
           所有咖啡馆接口返回的数据结构基于 CafeInput，字段如下：
         </p>
